@@ -106,4 +106,3 @@ gulp.task('livereload', function() {
  */
 gulp.task('build', ['usemin', 'build-assets', 'build-custom']);
 gulp.task('default', ['build', 'webserver', 'livereload', 'watch']);
-gulp.task('production', ['build', 'webserver']);
