@@ -102,7 +102,19 @@ gulp.task('livereload', function() {
 });
 
 /**
+ * Production server
+ */
+gulp.task('serveprod', function() {
+    connect.server({
+        root: 'dist',
+        port: process.env.PORT || 5000,
+        livereload: false
+    });
+});
+
+/**
  * Gulp tasks
  */
 gulp.task('build', ['usemin', 'build-assets', 'build-custom']);
 gulp.task('default', ['build', 'webserver', 'livereload', 'watch']);
+gulp.task('production', ['build', 'serveprod']);
