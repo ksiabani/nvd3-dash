@@ -6,6 +6,9 @@
         "Leonel Samayoa <leonel.e.samayoa@gmail.com> (http://gobliip.com)",
         "Ricardo Pascua <rdpascua@outlook.com>"
     ],
+    "scripts": {
+        "postinstall": "bower install --config.interactive=true && gulp default"
+    },
     "dependencies": {
         "gulp": "~3.8.0",
         "gulp-connect": "^2.0.6",
