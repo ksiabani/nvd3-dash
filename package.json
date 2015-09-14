@@ -7,7 +7,7 @@
         "Ricardo Pascua <rdpascua@outlook.com>"
     ],
     "scripts": {
-        "postinstall": "bower install --config.interactive=true && gulp default"
+        "postinstall": "bower install && gulp default"
     },
     "dependencies": {
         "gulp": "~3.8.0",
