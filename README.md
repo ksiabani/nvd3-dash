@@ -1,5 +1,4 @@
 Showcasing the use of nvd3
 
-Inline-style: 
-![alt text](src/img/nvd3-dash.png "Dashboard screenshot")
+![alt text](https://github.com/ksiabani/nvd3-dash/raw/master/src/img/nvd3-dash.png "Dashboard screenshot")
 
