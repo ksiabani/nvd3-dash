@@ -49,3 +49,4 @@ Icon
 
 # IDE specific
 .idea/
+.idea/workspace.xml
