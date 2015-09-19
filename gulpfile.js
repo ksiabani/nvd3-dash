@@ -8,7 +8,8 @@ var gulp = require('gulp'),
     concat = require('gulp-concat'),
     less = require('gulp-less'),
     rename = require('gulp-rename'),
-    minifyHTML = require('gulp-minify-html');
+    minifyHTML = require('gulp-minify-html'),
+    ghPages = require('gulp-gh-pages');
 
 var paths = {
     scripts: 'src/js/**/*.*',
@@ -103,14 +104,11 @@ gulp.task('livereload', function() {
 });
 
 /**
- * Production server
+ * Deploy to GitHub Pages
  */
-gulp.task('serveprod', function() {
-    connect.server({
-        root: 'dist',
-        port: process.env.PORT || 5000,
-        livereload: false
-    });
+gulp.task('deploy', function() {
+  return gulp.src('./dist/**/*')
+    .pipe(ghPages());
 });
 
 /**
@@ -118,4 +116,3 @@ gulp.task('serveprod', function() {
  */
 gulp.task('build', ['usemin', 'build-assets', 'build-custom']);
 gulp.task('default', ['build', 'webserver', 'livereload', 'watch']);
-gulp.task('production', ['build', 'serveprod']);

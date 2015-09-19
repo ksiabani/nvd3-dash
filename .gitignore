@@ -50,3 +50,6 @@ Icon
 # IDE specific
 .idea/
 .idea/workspace.xml
+
+# Publish to gh-pages
+.publish
